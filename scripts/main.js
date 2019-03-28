@@ -6,8 +6,8 @@ document.getElementById('btn-right-guy').onclick = function() {
   guy_img.style.position = "relative";
   if (x < 550) {
     x += 85;
+    $("#guy").animate({left:'+=85px'})
   }
-  guy_img.style.left = x + "px";
 }
 
 var x = 0;
@@ -16,8 +16,8 @@ document.getElementById('btn-left-guy').onclick = function () {
   guy_img.style.position = "relative";
   if (x > 0) {
     x -= 85;
+    $("#guy").animate({left:'-=85px'})
   }
-  guy_img.style.left = x + "px";
 }
 
 var y = 0;
@@ -26,8 +26,8 @@ document.getElementById('btn-up-guy').onclick = function() {
   guy_img.style.position = "relative";
   if (y != 0 && y < 85) {
     y += 85;
+    $("#guy").animate({bottom:'+=85px'})
   }
-  guy_img.style.bottom = y + "px";
 }
 
 var y = 0;
@@ -36,8 +36,8 @@ document.getElementById('btn-down-guy').onclick = function() {
   guy_img.style.position = "relative";
   if (y > -550) {
     y -= 85;
+    $("#guy").animate({bottom:'-=85px'})
   }
-  guy_img.style.bottom = y + "px";
 }
 
 
@@ -49,8 +49,9 @@ document.getElementById('btn-right-girl').onclick = function right() {
   girl_img.style.position = "relative";
   if (w < 0) {
     w += 85;
+    $("#girl").animate({left:'+=85px'})
+
   }
-  girl_img.style.left = w + "px";
 }
 
 var w = 0;
@@ -59,8 +60,8 @@ document.getElementById('btn-left-girl').onclick = function right() {
   girl_img.style.position = "relative";
   if (w > -595) {
     w -= 85;
+    $("#girl").animate({left:'-=85px'})
   }
-  girl_img.style.left = w + "px";
 }
 
 var z = 85;
@@ -69,8 +70,8 @@ document.getElementById('btn-up-girl').onclick = function right() {
   girl_img.style.position = "relative";
   if (z < 595) {
     z += 85;
+    $("#girl").animate({bottom:'+=85px'})
   }
-  girl_img.style.bottom = z + "px";
 }
 
 var z = 0;
@@ -79,7 +80,6 @@ document.getElementById('btn-down-girl').onclick = function right() {
   girl_img.style.position = "relative";
   if (z > 0) {
     z -= 85;
+    $("#girl").animate({bottom:'-=85px'})
   }
-  console.log(z);
-  girl_img.style.bottom = z + "px";
 }
