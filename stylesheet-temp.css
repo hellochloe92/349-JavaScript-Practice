@@ -1,0 +1,55 @@
+
+
+.map{
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px
+                           75px 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px 75px
+                        75px 75px 75px 75px;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444
+}
+
+.Box{
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 150%;
+}
+.spriteP1{
+  background-image: url("images/Idle__001.png");
+  width: 50px;
+  height: 50px;
+}
+$(".spriteP1").animateSprite({
+  fps: 12,
+  animations: {
+    walkRight: [0, 1, 2, 3, 4, 5, 6, 7,],
+    walkLeft: [15, 14, 13, 12, 11, 10, 9, 8],
+    walkUp: [16, 17, 18, 19, 20, 21, 22, 24],
+    walkDown: [25, 26, 27, 28, 29, 30, 31, 32]
+  },
+  loop: true,
+  complete: fuction(){
+
+  }
+  });
+.spriteP2{
+  background-image: url("images/Shoot (1)");
+  width: 50px;
+  height: 50px;
+}
+$(".spriteP2").animateSprite({
+  fps: 12,
+  animations: {
+    walkRight: [0, 1, 2, 3, 4, 5, 6, 7,],
+    walkLeft: [15, 14, 13, 12, 11, 10, 9, 8],
+    walkUp: [16, 17, 18, 19, 20, 21, 22, 24],
+    walkDown: [25, 26, 27, 28, 29, 30, 31, 32]
+  },
+  loop: true,
+  complete: fuction(){
+
+  }
+  });
