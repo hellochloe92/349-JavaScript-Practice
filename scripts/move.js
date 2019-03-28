@@ -1,65 +1,114 @@
 
 var x = 0;
 var y = 0;
-document.addEventListener('keyDown', press)
-document.onkeydown = function(event){
+//document.addEventListener('keyUp', press)
+document.onkeydown = function () {
     press(event);
-}
+};
 function press(event) {
     if (event.key === 'w') {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
-        y += 170;
+        hitTopGuy();
         guy_img.style.bottom = y + "px";
     }
     
     if (event.key === 'd') {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
-        x += 170;
+        hitRightGuy();
         guy_img.style.left = x + "px";
     }
     
     if (event.key === 's') {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
-        y -= 85;
+        hitBottomGuy();
         guy_img.style.bottom = y + "px";
     }
     
     if (event.key === 'a') {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
-        x -= 85;
+        hitLeftGuy();
         guy_img.style.left = x + "px";
     }
     
-    if (event.key === 'i'){
+    if (event.key === 'i') {
         var girl_img = document.getElementById('girl');
         girl_img.style.position = "relative";
-        y += 170;
+        hitTopGirl();
         girl_img.style.bottom = y + "px";
     }
     
     if (event.key === 'j') {
         var girl_img = document.getElementById('girl');
         girl_img.style.position = "relative";
-        x -= 85;
+        hitLeftGirl();
         girl_img.style.left = x + "px";
     }
     
      if (event.key === 'k') {
         var girl_img = document.getElementById('girl');
         girl_img.style.position = "relative";
-        y -= 85;
+        hitBottomGirl();
         girl.style.bottom = y + "px";
     }
     
     if (event.key === 'l') {
         var girl_img = document.getElementById('girl');
         girl.style.position = "relative";
-        x += 170;
+        hitRightGirl();
         girl.style.left = x + "px";
     } 
 }
+
+function hitTopGuy () {
+    if (y != 0 && y < 85) {
+        y += 85;
+    }
+}
+
+function hitBottomGuy () {
+    if (y > -550) {
+        y -= 85;
+    }
+}
+
+function hitLeftGuy () {
+    if (x > 0) {
+        x -= 85;
+    }
+}
+
+function hitRightGuy () {
+    if (x < 550) {
+        x += 85;
+    }
+}
+
+function hitTopGirl () {
+    if (y < 595) {
+        y += 85;
+    }
+}
+
+function hitBottomGirl () {
+    if (y > 0) {
+        y -= 85;
+    }
+}
+
+function hitLeftGirl () {
+    if (x > -595) {
+        x -= 85;
+    }
+}
+
+function hitRightGirl () {
+    if (x < 0) {
+        x += 85;
+    }
+}
+
 
