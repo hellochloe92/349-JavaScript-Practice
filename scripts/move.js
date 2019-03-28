@@ -10,56 +10,56 @@ function press(event) {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
         hitTopGuy();
-        guy_img.style.bottom = y + "px";
+        $("#guy").animate({bottom:'+=85px'})
     }
     
     if (event.key === 'd') {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
         hitRightGuy();
-        guy_img.style.left = x + "px";
+        $("#guy").animate({left:'+=85px'})
     }
     
     if (event.key === 's') {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
         hitBottomGuy();
-        guy_img.style.bottom = y + "px";
+        $("#guy").animate({bottom:'-=85px'})
     }
     
     if (event.key === 'a') {
         var guy_img = document.getElementById('guy');
         guy_img.style.position = "relative";
         hitLeftGuy();
-        guy_img.style.left = x + "px";
+       $("#guy").animate({left:'-=85px'})
     }
     
     if (event.key === 'i') {
         var girl_img = document.getElementById('girl');
         girl_img.style.position = "relative";
         hitTopGirl();
-        girl_img.style.bottom = y + "px";
+        $("#girl").animate({bottom:'+=85px'})
     }
     
     if (event.key === 'j') {
         var girl_img = document.getElementById('girl');
         girl_img.style.position = "relative";
         hitLeftGirl();
-        girl_img.style.left = x + "px";
+        $("#girl").animate({left:'-=85px'})
     }
     
      if (event.key === 'k') {
         var girl_img = document.getElementById('girl');
         girl_img.style.position = "relative";
         hitBottomGirl();
-        girl.style.bottom = y + "px";
+        $("#girl").animate({bottom:'-=85px'})
     }
     
     if (event.key === 'l') {
         var girl_img = document.getElementById('girl');
         girl.style.position = "relative";
         hitRightGirl();
-        girl.style.left = x + "px";
+        $("#girl").animate({left:'-=85px'})
     } 
 }
 
@@ -110,5 +110,7 @@ function hitRightGirl () {
         x += 85;
     }
 }
+
+
 
 
